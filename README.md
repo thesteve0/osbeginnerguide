@@ -6,3 +6,5 @@ It assumes you know how to program in your language but may not know GIT or SSH 
 
 To see how all the pages are put together please look at index.txt
 These docs are written in ASCIIDOC.
+
+The documents in this repository are licensed Creative Commons 0 (CC0).
