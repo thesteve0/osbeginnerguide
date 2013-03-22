@@ -1,0 +1,11 @@
+Things You Need to Understand
+=================================
+
+//Some words 
+//		scalable
+//		gear 
+//		cartridge
+
+//	Some tech
+//		git
+//		ssh

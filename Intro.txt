@@ -1,0 +1,8 @@
+Introduction
+==================
+
+// Who you are
+//	What the goal is
+//	Where to make this doc better
+//		GitHub
+//		ASCIIDoc 
