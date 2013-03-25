@@ -1,0 +1,13 @@
+## pip project requirements
+
+# core project
+
+Django==1.4.5
+psycopg2==2.4.6
+South==0.7.6
+unipath==0.2.1
+doctools
+
+# devops
+
+gunicorn==0.17.2
