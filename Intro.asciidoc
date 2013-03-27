@@ -26,11 +26,12 @@ About this Document:
 
 This document is released under http://creativecommons.org/licenses/by/3.0/[Creative Commons License 3 Unported] which allows you to do almost anything you want with this as long as you attribute the original doc back to this site.
 
-The source is available on Github at the following location: https://github.com/thesteve0/osbeginnerguide //this will change once we pick a better place.
+The source is available on Github at the following location: https://github.com/thesteve0/osbeginnerguide 
+// this will change once we pick a better place.
 
-Everyone is invited to help contribute and improve the document. Sole responbility about what goes in the original github site belongs to the OpenShift team for now. That said we encourage debate and discussion on the flow and direction of the document.
+Everyone is invited to help contribute and improve the document. Sole responbility about what goes in the original github site belongs to the OpenShift team for now. That said, we encourage debate and discussion on the flow and direction of the document.
 
-The document is written in http://www.methods.co.nz/asciidoc/index.html[AsciiDoc], a simpler format than DocBook but with all the ability to output to multiple formats. The best reference is the http://www.methods.co.nz/asciidoc/userguide.html[AsciiDoc User Guide], but there are some guides avaiable http://asciidoctor.org/docs/asciidoc-writers-guide/#writing-in-asciidoc-first-steps[here], https://github.com/jakoch/asciidoc-cheatsheet[here], and http://www.methods.co.nz/asciidoc/book-multi.html[here]. Given the ability of Github to render AsciiDoc it also seemed a natural choice for the tutorial. 
+The document is written in http://www.methods.co.nz/asciidoc/index.html[AsciiDoc], a simpler format than DocBook but with all the ability to output to multiple formats. The best reference is the http://www.methods.co.nz/asciidoc/userguide.html[AsciiDoc User Guide], but there are some guides avaiable http://asciidoctor.org/docs/asciidoc-writers-guide/#writing-in-asciidoc-first-steps[here], https://github.com/jakoch/asciidoc-cheatsheet[here], and http://www.methods.co.nz/asciidoc/book-multi.html[here]. Given the ability of Github to render AsciiDoc, this format also seemed a natural choice for the tutorial. 
 
 // Who you are
 //	What the goal is

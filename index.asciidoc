@@ -1,5 +1,5 @@
 An Impatient Beginners Guide to OpenShift
-=======================
+=========================================
 Steven Citron-Pousty <spousty@redhat.com> 
 // please add yourself here
 :Author Initials: SIP
@@ -9,7 +9,8 @@ Steven Citron-Pousty <spousty@redhat.com>
 :website: http://www.openshift.com
 
 About this document
------------------------
+-------------------
+
 This is a a group collaboration on creating a Beginners Guide to OpenShift. If you want to join in please read the introduction.
 
 // Push titles down one level.
