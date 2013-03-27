@@ -11,7 +11,7 @@ There is some basic terminology which is specific to OpenShift or used specifica
 Gear:: 
 Cartridge:: 
 Application::
-Scalable:: 
+Scalable:: Here is what scalable means
 
 
 Some technology you need to understand
