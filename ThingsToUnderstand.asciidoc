@@ -1,5 +1,5 @@
 Things You Need to Understand
-=================================
+-----------------------------
 
 We know you are impatient and want to get started but it is important for us to get some definitions cleared up right from the start. It is also import to introduce some technology that is used throughout your development workflow. If you are comforable with the technology please feel free to skip right over to the next section, but please make sure you understand the definitions.
 
