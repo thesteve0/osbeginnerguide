@@ -1,0 +1,37 @@
+An Impatient Beginners Guide to OpenShift
+=======================
+Steven Citron-Pousty <spousty@redhat.com> //please add yourself here
+:Author Initials: SIP
+:toc:
+:icons:
+:numbered:
+:website: http://www.openshift.com
+
+About this document
+-----------------------
+This is a a group collaboration on creating a Beginners Guide to OpenShift. If you want to join in please read the introduction.
+
+// Push titles down one level.
+:leveloffset: 1
+
+include::Intro.asciidoc[]
+include::ThingsToUnderstand.txt[]
+include::CreateAnApp.txt[]
+include::ModifyCode.txt[]
+include::ModifyManageApp.txt[]
+include::EnvVarsAndOthers.txt[]
+include::DiskUsage.txt[]
+include::Dependencies.txt[]
+include::BackupAndOthers.asciidoc[]
+include::TeamCollaboration.txt[]
+
+// Return to normal title levels.
+// :leveloffset: 0
+
+// A Top Level Section
+// -------------------
+//Lorum ipsum.
+
+
+
+
