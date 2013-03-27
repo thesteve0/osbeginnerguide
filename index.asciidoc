@@ -1,6 +1,7 @@
 An Impatient Beginners Guide to OpenShift
 =======================
-Steven Citron-Pousty <spousty@redhat.com> //please add yourself here
+Steven Citron-Pousty <spousty@redhat.com> 
+// please add yourself here
 :Author Initials: SIP
 :toc:
 :icons:
@@ -30,7 +31,7 @@ include::TeamCollaboration.txt[]
 
 // A Top Level Section
 // -------------------
-//Lorum ipsum.
+// Lorum ipsum.
 
 
 
