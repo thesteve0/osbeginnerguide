@@ -1,7 +1,24 @@
 Things You Need to Understand
 =================================
 
-//Some words 
+We know you are impatient and want to get started but it is important for us to get some definitions cleared up right from the start. It is also import to introduce some technology that is used throughout your development workflow. If you are comforable with the technology please feel free to skip right over to the next section, but please make sure you understand the definitions.
+
+Some words you need to understand
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is some basic terminology which is specific to OpenShift or used specifically by us. It is important to clear these up since they will be used throughout the documents.
+
+Gear:: 
+Cartridge:: 
+Application::
+Scalable:: 
+
+
+Some technology you need to understand
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is also some basic technology you need to be able to use to really work with OpenShift effectively as a developer. The rest of this document will assume you understand this technology at a basic level  
+
 //		scalable
 //		gear 
 //		cartridge

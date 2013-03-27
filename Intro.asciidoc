@@ -1,7 +1,7 @@
 Introduction
 -----------
 
-Welcome to the Absolute Beginners guide to OpenShift for the Impatient. 
+Welcome to the Impatient Absolute Beginners guide to OpenShift. 
 
 Who you are:
 ~~~~~~~~~~~~
@@ -13,7 +13,7 @@ As the title indicates, we are assuming little in the way of background knowledg
 * You can program in one of the six programming languages OpenShift supports
 * You can use a text editor on a Linux machine, the most basic is http://www.nano-editor.org/docs.php[nano] but VI or Emacs will be okay as well
 
-This guide is intended for programmers who want to get started using OpenShift as quickly as possible but also want to understand a slight bit of what they are doing.  
+This guide is intended for programmers who want to get started using OpenShift as quickly as possible but also want to understand a little bit of what they are doing.  
 
 Goal of this document:
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -33,8 +33,3 @@ Everyone is invited to help contribute and improve the document. Sole responbili
 
 The document is written in http://www.methods.co.nz/asciidoc/index.html[AsciiDoc], a simpler format than DocBook but with all the ability to output to multiple formats. The best reference is the http://www.methods.co.nz/asciidoc/userguide.html[AsciiDoc User Guide], but there are some guides avaiable http://asciidoctor.org/docs/asciidoc-writers-guide/#writing-in-asciidoc-first-steps[here], https://github.com/jakoch/asciidoc-cheatsheet[here], and http://www.methods.co.nz/asciidoc/book-multi.html[here]. Given the ability of Github to render AsciiDoc, this format also seemed a natural choice for the tutorial. 
 
-// Who you are
-//	What the goal is
-//	Where to make this doc better
-//		GitHub
-//		ASCIIDoc 
