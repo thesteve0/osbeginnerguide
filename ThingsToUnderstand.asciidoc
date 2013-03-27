@@ -8,10 +8,15 @@ Some words you need to understand
 
 There is some basic terminology which is specific to OpenShift or used specifically by us. It is important to clear these up since they will be used throughout the documents.
 
-Gear:: 
-Cartridge:: 
-Application::
-Scalable:: Here is what scalable means
+Application:: This is your typical web application that will run on OpenShift. At this time, OpenShift is focused on hosting web applications. With this in mind, and to try and provide some security for your applications, the only ports we expose to incoming traffic are HTTP (80), HTTPS (443), and SSH (22). We also provide experimental http://en.wikipedia.org/wiki/WebSocket[WebSocket] support on HTTP (8000) and HTTPS (8443).
+
+Gear:: A gear is a server container with a set of resources that allows users to run their applications. Your gears run on OpenShift in the cloud. To get a gear to do anything you need to add a cartridge. There are currently two gear sizes on OpenShift Online, Small and Medium. Each size provides 1 gig of disk space but the Medium has 1 gig of RAM while the small has 512 megs of RAM.
+
+Cartridge:: Cartridges are the containers that house the framework or components that can be used to create and run an application. One or more cartridges run on each gear or the same cartridge can run on many gears for clustering or scaling. There are two kinds of cartridges:
+	. Standalone - These are the Languages that are set up to serve your web content, such as JBoss, Tomcat, Python, or Node.JS. Having one of these cartridges is sufficient to run an application. 
+	. Embedded - An embedded cartridge provides functionality to enhance your application, such a database or cron,  but can not be used to create an application.
+
+Scalable Application:: Application scaling enables your application to react to changes in traffic and automatically allocate the necessary resources to handle your increased demand. The OpenShift infrastructure monitors incoming web traffic and automatically brings up new gears with the appropriate web cartridge online to handle more requests. We have a whole page dedicated to explaining how we https://www.openshift.com/developers/scaling[scaling works on OpenShift]
 
 
 Some technology you need to understand
