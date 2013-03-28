@@ -29,5 +29,12 @@ There is also some basic technology you need to be able to use to really work wi
 
 SSH:: http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch01_01.htm[SSH is a tool] you install on your local machine that allows you to log in to your OpenShift gears and have command line access. We use SSH keys to authenticate your login. Once you SSH into your gear you have all the access you need as an application develop: you can look at logs, change some of the configurations for your app servers, and move files around. But you are not an adminstrator on the gear: you can not install new binaries using Yum, you can not changes DNS settings, and you can not get root access. One other benefit of SSH is that can also use it to port-forward, which "tricks" your local machine into thinking things running on your gear can be accessed locally. There is a whole section dealing with https://www.openshift.com/developers/remote-access[remote access over SSH]. We also have a blog post discussing https://www.openshift.com/blogs/getting-started-with-port-forwarding-on-openshift[SSH port forwarding]. 
 
-Git::
+Git:: Git is a program that provides distributed version control. If you are used to Subversion, CVS, or Visual SourceSafe, these are centralized version control, where there is a master server and everyone else has copy that they need to synchronize with the master. In git, every repository, from the one on your laptop to the one on the server, is considered a legitimate master. Everything is kept in synch through patches sent between repositories. You can use git like a psuedo-centralized version control system by having everyone on the team agree on "The Master". Wikipedia has a http://en.wikipedia.org/wiki/Distributed_revision_control[good discussion] about some of the differences between centralized and distributed version controls.
+
+The important thing to keep in mind with a git is that the git repository on your machine is considered a repository and you need to commit your changes there first. You have to commit the changes on your local machine before you can push your changes to any other git repository. 
+
+On OpenShift, when we spin up the primary application gear we create a git repository on that gear that hosts all the code for your application. If you use the command line tools or the eclipse tools, at the end of application creation we clone the git repository off the gear onto your local machine. You now have two git repositories: 
+
+. A remote repository on the OpenShift gear
+. A local repository on your laptop or desktop
 
