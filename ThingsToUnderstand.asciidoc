@@ -33,11 +33,17 @@ Git:: http://git-scm.com/[Git] is a program that provides distributed version co
 
 The important thing to keep in mind with a git is that the git repository on your machine is considered a repository and you need to commit your changes there first. You have to add any new files and commit any changes on your local machine before you can push your changes to any other git repository. 
 
-On OpenShift, when we spin up the primary application gear we create a git repository on that gear which hosts all the code for your application. If you use the command line tools or the eclipse tools, at the end of application creation we clone the git repository off the gear onto your local machine. You now have two git repositories: 
+On OpenShift, when we spin up the primary application gear we create a git repository on that gear which hosts all the code for your application. If you use the command line tools or the eclipse tools, at the end of application creation we clone the git repository off the gear onto your local machine. We use SSH to secure all our git transactions - so if you don't get your SSH keys set up properly you can't actually do any development work on your application. After the cloning, you now have two git repositories: 
 
 . A remote repository on the OpenShift gear
 . A local repository on your laptop or desktop
 
+There are three basic commands you need to use to work with OpenShift:
+
+* git add
+* git commit
+* git push
+
 If you interested in learning more, there are http://git-scm.com/book/en/Getting-Started[several different] good http://alistapart.com/article/get-started-with-git[documents] to get http://rogerdudler.github.com/git-guide/[you going]. If you are coming from Subversion land, there is even a http://www.ibm.com/developerworks/library/l-git-subversion-1/[git introduction for you].The fine people at GitHub have also put together a nice https://help.github.com/articles/what-are-other-good-resources-for-using-git-or-github[collection of resources about git].
 
-A quick note about the difference between git and https://github.com/[GitHub]. Git is the tool, GitHub is a site that allows for public and private hosting of git repositories. Github also adds a lot of social features making it very easy for developers to find and collaborate on code. We help to put quickstarts, git repositories that are a shortcut to getting started with a framework or an application, on https://github.com/openshift/[GitHub]. That said there is no requirement to use GitHub with OpenShift, and your repositories are private and only accesible by people ith SSH access to your gear.
+A quick note about the difference between git and https://github.com/[GitHub]. Git is the tool, GitHub is a site that allows for public and private hosting of git repositories. Github also adds a lot of social features making it very easy for developers to find and collaborate on code. We help to put quickstarts, git repositories that are a shortcut to getting started with a framework or an application, on https://github.com/openshift/[GitHub]. That said there is no requirement to use GitHub with OpenShift, and your repositories are private and only accesible by people with SSH access to your gear.
