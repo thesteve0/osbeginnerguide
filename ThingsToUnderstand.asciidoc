@@ -40,9 +40,11 @@ On OpenShift, when we spin up the primary application gear we create a git repos
 
 There are three basic commands you need to use to work with OpenShift:
 
-* git add
-* git commit
-* git push
+* git add: add a file to your local git repository. Even if a file is in the folder representing your git repo, it is *not* considered part of the repository until you add it.
+
+* git commit: commit any changes you have made to your local repository
+
+* git push: push the changes from your local repository back up to the gear where it was cloned from.
 
 If you interested in learning more, there are http://git-scm.com/book/en/Getting-Started[several different] good http://alistapart.com/article/get-started-with-git[documents] to get http://rogerdudler.github.com/git-guide/[you going]. If you are coming from Subversion land, there is even a http://www.ibm.com/developerworks/library/l-git-subversion-1/[git introduction for you].The fine people at GitHub have also put together a nice https://help.github.com/articles/what-are-other-good-resources-for-using-git-or-github[collection of resources about git].
 
