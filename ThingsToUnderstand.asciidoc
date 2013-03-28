@@ -6,7 +6,7 @@ We know you are impatient and want to get started but it is important for us to 
 Some words you need to understand
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There is some basic terminology which is specific to OpenShift or used specifically by us. It is important to clear these up since they will be used throughout the documents.
+There is some basic terminology which is specific to OpenShift or used specifically by us. It is important to clear these up since they will be used throughout the documents. 
 
 Application:: This is your typical web application that will run on OpenShift. At this time, OpenShift is focused on hosting web applications. With this in mind, and to try and provide some security for your applications, the only ports we expose to incoming traffic are HTTP (80), HTTPS (443), and SSH (22). We also provide experimental http://en.wikipedia.org/wiki/WebSocket[WebSocket] support on HTTP (8000) and HTTPS (8443).
 
@@ -14,9 +14,11 @@ Gear:: A gear is a server container with a set of resources that allows users to
 
 Cartridge:: Cartridges are the containers that house the framework or components that can be used to create and run an application. One or more cartridges run on each gear or the same cartridge can run on many gears for clustering or scaling. There are two kinds of cartridges:
 	. Standalone - These are the Languages that are set up to serve your web content, such as JBoss, Tomcat, Python, or Node.JS. Having one of these cartridges is sufficient to run an application. 
-	. Embedded - An embedded cartridge provides functionality to enhance your application, such a database or cron,  but can not be used to create an application.
+	. Embedded - An embedded cartridge provides functionality to enhance your application, such a database or cron, but can not be used to create an application.
 
-Scalable Application:: Application scaling enables your application to react to changes in traffic and automatically allocate the necessary resources to handle your increased demand. The OpenShift infrastructure monitors incoming web traffic and automatically brings up new gears with the appropriate web cartridge online to handle more requests. We have a whole page dedicated to explaining how we https://www.openshift.com/developers/scaling[scaling works on OpenShift]
+Scalable Application:: Application scaling enables your application to react to changes in traffic and automatically allocate the necessary resources to handle your increased demand. The OpenShift infrastructure monitors incoming web traffic and automatically brings up new gears with the appropriate web cartridge online to handle more requests. When traffic decreases we retire the extra resources. We have a whole page dedicated to explaining how https://www.openshift.com/developers/scaling[scaling works on OpenShift]
+
+Client Tools, Web Console, or Eclipse plugins:: These are the tools you install on your local machine (laptop or desktop), use the Manage your application portion of the website, or install as a plugin to Eclipse to interact with your application in the OpenShift cloud. The only time you must use them is when you are doing infrastructure like things to your application. For example, you would use these tools when creating an application or embedding a new cartdige. The rest of your work with your application will happen through Git and SSH, which we describe below.
 
 
 Some technology you need to understand
@@ -24,10 +26,8 @@ Some technology you need to understand
 
 There is also some basic technology you need to be able to use to really work with OpenShift effectively as a developer. The rest of this document will assume you understand this technology at a basic level  
 
-//		scalable
-//		gear 
-//		cartridge
 
-//	Some tech
-//		git
-//		ssh
+SSH:: http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch01_01.htm[SSH is a tool] you install on your local machine that allows you to log in to your OpenShift gears and have command line access. We use SSH keys to authenticate your login. Once you SSH into your gear you have all the access you need as an application develop: you can look at logs, change some of the configurations for your app servers, and move files around. But you are not an adminstrator on the gear: you can not install new binaries using Yum, you can not changes DNS settings, and you can not get root access. One other benefit of SSH is that can also use it to port-forward, which "tricks" your local machine into thinking things running on your gear can be accessed locally. There is a whole section dealing with https://www.openshift.com/developers/remote-access[remote access over SSH]. We also have a blog post discussing https://www.openshift.com/blogs/getting-started-with-port-forwarding-on-openshift[SSH [port forwarding]. 
+
+Git::
+
