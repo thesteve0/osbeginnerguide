@@ -3,8 +3,15 @@ Introduction
 
 Welcome to the Impatient Absolute Beginners guide to OpenShift. 
 
+Why do you care
+~~~~~~~~~~~~~~~
+
+Fundamentally, the reason you want to use OpenShift is because you like writing applications, not administering servers. With just a couple of changes in the way you do your application development, you can spin up your web server and database with one command. You will no longer need to keep the operating system up to date, patch the web servers, maintain the DNS, and all the other tasks that distract you from writing code. By the end of this guide you should be all set to understand how to build, deploy, and host your applications on OpenShift.
+
 Who you are:
 ~~~~~~~~~~~~
+
+You are a web or mobile application developer - you write apps that use HTTP for part or all of their communication with the end users of your application. If you are a systems adminstrator and you want to understand all the ways OpenShift makes you life better, please go to the http://HHHHH.COM[following documents????]
 
 As the title indicates, we are assuming little in the way of background knowledge except:
 
