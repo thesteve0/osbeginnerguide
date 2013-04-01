@@ -1,5 +1,5 @@
 Modifying your Application "Infrastructure"
--------------------------------------------
+===========================================
 
 Adding Database Related Cartridges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

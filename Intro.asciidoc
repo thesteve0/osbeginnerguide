@@ -1,5 +1,5 @@
 Introduction
------------
+============
 
 Welcome to the Impatient Absolute Beginners guide to OpenShift. 
 

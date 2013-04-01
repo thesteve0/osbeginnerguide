@@ -1,5 +1,5 @@
 Creating an Application on OpenShift
-------------------------------------
+====================================
 
 Steps you have already done
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
