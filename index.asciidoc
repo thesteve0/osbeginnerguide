@@ -11,7 +11,9 @@ Steven Citron-Pousty <spousty@redhat.com>
 About this document
 -------------------
 
-This is a a group collaboration on creating a Beginners Guide to OpenShift. If you want to join in please read the introduction.
+This is a a group collaboration on creating a Beginners Guide to OpenShift. If you want to join in please read the introduction. License http://creativecommons.org/licenses/by-sa/3.0/
+
+There will be more text here in the future but I want to finish the doc so I have an overall sense of what to put here.
 
 // Push titles down one level.
 :leveloffset: 1
