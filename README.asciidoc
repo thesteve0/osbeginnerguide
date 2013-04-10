@@ -20,14 +20,23 @@ http://creativecommons.org/licenses/by-sa/3.0/
 :leveloffset: 1
 
 include::Intro.asciidoc[]
+
 include::ThingsToUnderstand.txt[]
+
 include::CreateAnApp.txt[]
+
 include::ModifyCode.txt[]
+
 include::ModifyManageApp.txt[]
+
 include::EnvVarsAndOthers.txt[]
+
 include::DiskUsage.txt[]
+
 include::Dependencies.txt[]
+
 include::BackupAndOthers.asciidoc[]
+
 include::TeamCollaboration.txt[]
 
 // Return to normal title levels.
