@@ -1,0 +1,18 @@
+Making Code Modifications
+=========================
+
+
+Where is your code
+~~~~~~~~~~~~~~~~~~
+
+
+Modify your code
+~~~~~~~~~~~~~~~~
+
+
+Build and Deploy Your code
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Use hot_deploy Where Possible
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

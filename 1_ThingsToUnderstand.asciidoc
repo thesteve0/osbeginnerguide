@@ -1,0 +1,51 @@
+Things You Need to Understand
+-----------------------------
+
+We know you are impatient and want to get started but it is important for us to get some definitions cleared up right from the start. It is also import to introduce some technology that is used throughout your development workflow. If you are comforable with the technology please feel free to skip right over to the next section, but please make sure you understand the definitions.
+
+Some words you need to understand
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is some basic terminology which is specific to OpenShift or used specifically by us. It is important to clear these up since they will be used throughout the documents. 
+
+Application:: This is your typical web application that will run on OpenShift. At this time, OpenShift is focused on hosting web applications. With this in mind, and to try and provide some security for your applications, the only ports we expose to incoming traffic are HTTP (80), HTTPS (443), and SSH (22). We also provide experimental http://en.wikipedia.org/wiki/WebSocket[WebSocket] support on HTTP (8000) and HTTPS (8443).
+
+Gear:: A gear is a server container with a set of resources that allows users to run their applications. Your gears run on OpenShift in the cloud. To get a gear to do anything you need to add a cartridge. There are currently two gear sizes on OpenShift Online, Small and Medium. Each size provides 1 gig of disk space but the Medium has 1 gig of RAM while the small has 512 megs of RAM.
+
+Cartridge:: Cartridges are the containers that house the framework or components that can be used to create and run an application. One or more cartridges run on each gear or the same cartridge can run on many gears for clustering or scaling. There are two kinds of cartridges:
+	. Standalone - These are the Languages that are set up to serve your web content, such as JBoss, Tomcat, Python, or Node.JS. Having one of these cartridges is sufficient to run an application. 
+	. Embedded - An embedded cartridge provides functionality to enhance your application, such a database or cron, but can not be used to create an application.
+
+Scalable Application:: Application scaling enables your application to react to changes in traffic and automatically allocate the necessary resources to handle your increased demand. The OpenShift infrastructure monitors incoming web traffic and automatically brings up new gears with the appropriate web cartridge online to handle more requests. When traffic decreases we retire the extra resources. We have a whole page dedicated to explaining how https://www.openshift.com/developers/scaling[scaling works on OpenShift]
+
+Client Tools, Web Console, or Eclipse plugins:: These are the tools you install on your local machine (laptop or desktop), use the Manage your application portion of the website, or install as a plugin to Eclipse to interact with your application in the OpenShift cloud. The only time you must use them is when you are doing infrastructure like things to your application. For example, you would use these tools when creating an application or embedding a new cartdige. The rest of your work with your application will happen through Git and SSH, which we describe below.
+
+
+Some technology you need to understand
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is also some basic technology you need to be able to use to really work with OpenShift effectively as a developer. The rest of this document will assume you understand this technology at a basic level  
+
+
+SSH:: http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch01_01.htm[SSH is a tool] you install on your local machine that allows you to log in to your OpenShift gears and have command line access. We use SSH keys to authenticate your login. Once you SSH into your gear you have all the access you need as an application develop: you can look at logs, change some of the configurations for your app servers, and move files around. But you are not an adminstrator on the gear: you can not install new binaries using Yum, you can not changes DNS settings, and you can not get root access. One other benefit of SSH is that can also use it to port-forward, which "tricks" your local machine into thinking things running on your gear can be accessed locally. There is a whole section dealing with https://www.openshift.com/developers/remote-access[remote access over SSH]. We also have a blog post discussing https://www.openshift.com/blogs/getting-started-with-port-forwarding-on-openshift[SSH port forwarding]. 
+
+Git:: http://git-scm.com/[Git] is a program that provides distributed version control. There are If you are used to Subversion, CVS, or Visual SourceSafe, these are centralized version control, where there is a master server and everyone else has copy that they need to synchronize with the master. In git, every repository, from the one on your laptop to the one on the server, is considered a legitimate master. Everything is kept in synch through patches sent between repositories. You can use git like a psuedo-centralized version control system by having everyone on the team agree on "The Master". Wikipedia has a http://en.wikipedia.org/wiki/Distributed_revision_control[good discussion] about some of the differences between centralized and distributed version controls.
+
+The important thing to keep in mind with a git is that the git repository on your machine is considered a repository and you need to commit your changes there first. You have to add any new files and commit any changes on your local machine before you can push your changes to any other git repository. 
+
+On OpenShift, when we spin up the primary application gear we create a git repository on that gear which hosts all the code for your application. If you use the command line tools or the eclipse tools, at the end of application creation we clone the git repository off the gear onto your local machine. We use SSH to secure all our git transactions - so if you don't get your SSH keys set up properly you can't actually do any development work on your application. After the cloning, you now have two git repositories: 
+
+. A remote repository on the OpenShift gear
+. A local repository on your laptop or desktop
+
+There are three basic commands you need to use to work with OpenShift:
+
+* git add: add a file to your local git repository. Even if a file is in the folder representing your git repo, it is *not* considered part of the repository until you add it.
+
+* git commit: commit any changes you have made to your local repository
+
+* git push: push the changes from your local repository back up to the gear where it was cloned from.
+
+If you interested in learning more, there are http://git-scm.com/book/en/Getting-Started[several different] good http://alistapart.com/article/get-started-with-git[documents] to get http://rogerdudler.github.com/git-guide/[you going]. If you are coming from Subversion land, there is even a http://www.ibm.com/developerworks/library/l-git-subversion-1/[git introduction for you].The fine people at GitHub have also put together a nice https://help.github.com/articles/what-are-other-good-resources-for-using-git-or-github[collection of resources about git].
+
+A quick note about the difference between git and https://github.com/[GitHub]. Git is the tool, GitHub is a site that allows for public and private hosting of git repositories. Github also adds a lot of social features making it very easy for developers to find and collaborate on code. We help to put quickstarts, git repositories that are a shortcut to getting started with a framework or an application, on https://github.com/openshift/[GitHub]. That said there is no requirement to use GitHub with OpenShift, and your repositories are private and only accesible by people with SSH access to your gear.
