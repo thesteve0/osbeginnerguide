@@ -1,4 +1,4 @@
-Decalring and Managing Code Dependencies
+Declaring and Managing Code Dependencies
 ============================
 
 //	declaring dependencies
