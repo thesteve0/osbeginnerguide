@@ -1,20 +1,17 @@
-Environment variables, Logs, and Changing Server Configurations
-==================================================================
+= Environment variables, Logs, and Changing Server Configurations
 
 
-SSH into Your Application
-~~~~~~~~~~~~~~~~~~~~~~~~~
+== SSH into Your Application
 
 
-
-Looking at Environment Variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+== Looking at Environment Variables
 
 
-Looking at your Logs
-~~~~~~~~~~~~~~~~~~~~
+== Adding your own Environment Variables
 
 
-Editing Application Server or Database Settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+== Looking at your Logs
+
+
+== Editing Application Server or Database Settings
 

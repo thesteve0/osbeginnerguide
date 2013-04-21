@@ -1,24 +1,61 @@
-Creating an Application on OpenShift
-====================================
+= Creating an Application on OpenShift
 
-Steps you have already done
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+== Steps you have already done
 
 * Signed up for https://openshift.redhat.com/app/account/new[an OpenShift account]
 * Installed the https://www.openshift.com/get-started#cli[command line tools]. While we could have used the web interface or the eclipse tools - we believe the command line tools are the best getting started experience (when not assuming an IDE) for people who intend to develop applications on OpenShift. Please stop after you are done with step 2. 
 
 I will explain the _rhc setup_ command below. 
 
-Getting the command line tools set up
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+== Getting the command line tools set up
 
-Once you have installed the tools we need to get them configured to work with your account on OpenShift.
+Once you have installed the tools we need to get them configured to work with your account on OpenShift. The first step is to setup your command line tools:
+
+----
+
+rhc setup
+
+----
+
+By running this command you set up your command line tools to talk to the OpenShift servers. There are several things this command will do:
+
+* Talk to the server and make sure your OpenShift username and password work. All the interaction between the command line tools happen over the OpenShift REST API. 
+* This is also the step where we create a token on your local machine. It will expire after a day so once a day you will have to enter a username and password once a day. 
+* The next step is that the command line tools ask you for a namespace. Your namespace will be part of all your application URLs and has to be unique on OpenShift. My reccomendation is to make it short but somehow related to you. You can change it later but it will change all your URLs.
+* Then the tool will check to see if you already have an SSH key named id_rsa. If you do it will upload that the key to OpenShift server. If you don't have a key it will create one for you and then ask to upload it. You need a key uploaded so you can all the day to day development interactions with the server. After it uploads the key your setup is complete. 
+
+[NOTE]
+====
+
+You may be wondering why you need a password and an SSH key. The reason for this is there are two different ways you interact with the server. There is "infrastructure" mode and "development" mode. 
+
+In infrastructure mode, you use the rhc command line tools to create an application, allocate more gears, or add another cartridge. This is the only time you are required to use the command line tools (or web console). The REST API, used by the command line tools, uses the OpenShift username and password for authentication.  
+
+In development mode, you don't need to use the command line tools anymore, and can do all your tools with SSH and git. Both of these tools use your SSH key to let you interact directly with your gears, for git pushes and for SSH'ing to your gears. When you SSH in you can change configurations and look at your logs. This piece of OpenShift doesn't care about your username and password and you will see the advantages of this later in the document. But this is why you need an SSH key *AND* a username and password. 
+
+====
 
 
+== Creating your first application
 
-Creating your first application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+With our setup complete we are ready to create our first application. For the purposes of this doc I am going to create a Python application but it has the easiest code to read. In actuality you could use any of our supported web cartridges to make an application. 
 
+Before we make an app please either create or navigate your command line into a directory where you want your application code to be created. At the end of application creation, the command line tools will clone the application's git repository to your local machine. 
+
+With that done - let's create an app!
+
+----
+
+rhc app create <app_name> <web_language>
+
+rhc app create firstapp python-2.6
+
+----
+
+That's it! When the command finishes you will have Apache with mod_wsgi running in the cloud. It will have a public url which will be: http://firstapp-<namespace>.rhcloud.com. It will also have a private git repository that has been cloned to your local machine.
+
+Go ahead and look at your web page. What you should see is the template page we make for all OpenShift applications. This page is pretty generic, so let's go on to the next section where we modify and deploy a code change.
 
 
 

@@ -1,12 +1,10 @@
-Modifying your Application "Infrastructure"
-===========================================
+= Modifying your Application "Infrastructure"
 
-Adding Database Related Cartridges
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+== Adding Database Related Cartridges
+
 MySQL and PHPMyAdmin
 
 
-Adding Other Cartridges
-~~~~~~~~~~~~~~~~~~~~~~~
+== Adding Other Cartridges
 
 Cron and monitoring cartridge
